@@ -1,0 +1,23 @@
+# permissions for end users to view metals.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: metal-operator
+    app.kubernetes.io/managed-by: kustomize
+  name: metal-viewer-role
+rules:
+- apiGroups:
+  - webapp.my.domain
+  resources:
+  - metals
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - webapp.my.domain
+  resources:
+  - metals/status
+  verbs:
+  - get

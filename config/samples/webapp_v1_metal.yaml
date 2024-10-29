@@ -1,0 +1,9 @@
+apiVersion: webapp.my.domain/v1
+kind: Metal
+metadata:
+  labels:
+    app.kubernetes.io/name: metal-operator
+    app.kubernetes.io/managed-by: kustomize
+  name: metal-sample
+spec:
+  # TODO(user): Add fields here
